@@ -10,6 +10,10 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # Note: pay close attention to your current directory when trying to open "foo.txt"
 
 # YOUR CODE HERE
+foo = open('./src/foo.txt', 'r')
+foo_file = foo.read()
+foo.close()
+print(foo_file)
 
 # Open up a file called "bar.txt" (which doesn't exist yet) for
 # writing. Write three lines of arbitrary content to that file,
@@ -17,3 +21,9 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # sure that it contains what you expect it to contain
 
 # YOUR CODE HERE
+bar = open('./src/bar.txt', 'w')
+bar.write('Those who have a complex about looks\nmistakenly think that\nevery person worth\nis measures solely on looks')
+bar = open('./src/bar.txt', 'r')
+bar_file = bar.read()
+bar.close()
+print(bar_file)
